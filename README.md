@@ -38,27 +38,27 @@ vector<vector<int>> vec(5, vector<int>(2, 10)); // Declares vector of vectors(he
 ```
 
 
-# Ways to Insert Elements into Vector
+## Ways to Insert Elements into Vector
 
-## Syntax
+### Syntax
 
 - `vec.push_back( ele );` Adds an element 'ele' at the end, and size of the vector increases by 1 (TC - 𝓞(1))
 - `vec.emplace_back( ele );` Adds an element 'ele' at the end, and size of the vector increases by 1 (TC - 𝓞(1))
 - `vec.insert( vec.begin() + i, ele );` Inserting element 'ele' at index i | Use i = 0 for inserting at the front (TC - 𝓞(n))
 - `vec.insert( vec.end(), vec2.begin(), vec2.end() );` Inserting the elements of vector 'v2' to the end of vector 'v' (TC - 𝓞(n))
 
-# Ways to Delete Elements from Vector
+## Ways to Delete Elements from Vector
 
-## Syntax
+### Syntax
 
 - `v.pop_back();` Remove element at the end (TC - 𝓞(1))
 - `v.erase( v.begin() + i );` Remove element at index i or i = 0 to remove the first element (TC - 𝓞(n))
 - `v.erase( v.begin() + i, v.begin() + j );` Remove elements from index i to j-1 (TC - 𝓞(n))
 - `v.erase( remove( v.begin(), v.end(), value ), v.end() );` Removes all elements with value 'value' from the vector (TC - 𝓞(n))
 
-# Basic Inbuilt Functions
+## Basic Inbuilt Functions
 
-## Syntax
+### Syntax
 
 - `v.size();` Returns the size of vector (TC - 𝓞(1))
 - `v.resize( size, val );` If the 'size' is greater than the previous size, then it adds elements with value 'val' at end and if 'size' is less than previous, then it removes from end
@@ -69,7 +69,7 @@ vector<vector<int>> vec(5, vector<int>(2, 10)); // Declares vector of vectors(he
 - `v.at(i);` Accessing element at i'th index (0-based) (TC - 𝓞(1))
 - `v.clear();` Clears vector elements by making vector as empty (TC - 𝓞(n))
 
-# Some Algorithmic Based Functions
+## Some Algorithmic Based Functions
 
 - `sort(v.begin(), v.end());` Sorts vector elements in ascending order by default (TC - 𝓞(nlogn))
 - `sort(v.begin(), v.end(), greater<int>);` Sorts vector elements in descending order (TC - 𝓞(nlogn))
@@ -139,7 +139,7 @@ A stack is a linear data structure that follows the principle of Last In First O
 stack< data_type > stack_name;
 ```
 
-## Examples
+### Examples
 
 - `stack<int> stk;` // stack of int's
 - `stack<string> stk;` // stack of strings
@@ -168,7 +168,7 @@ while(!stk.empty()){
 }
 ```
 
-Lets understand by sample program
+*Lets understand by sample program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -206,7 +206,7 @@ A queue is a linear data structure that follows the FIFO (First In First Out) pr
 queue< data_type > queue_name;
 ```
 
-# Examples
+### Examples
 
 - `queue<int> q;` // queue of int's
 - `queue<string> q;` // queue of strings
@@ -215,7 +215,7 @@ queue< data_type > queue_name;
 
 *Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
-# Important Functions on Queue
+## Important Functions on Queue
 
 - `q.push(ele);` // pushes an element 'ele' into the queue from the end      TC - 𝓞(1)
 - `q.pop();` // removes an element from the front of the queue      TC - 𝓞(1)
@@ -226,7 +226,7 @@ queue< data_type > queue_name;
 
 *Note: The time complexity of all above inbuilt functions is constant - 𝓞(1)*
 
-# Accessing Queue Elements
+## Accessing Queue Elements
 
 Since it won't provide indexing, we cannot directly access any element except the first and last element. The below is the way to traverse the queue.
 
@@ -237,7 +237,7 @@ while(!q.empty()){
 }
 ```
 
-Let's understand with a sample program
+*Let's understand with a sample program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -276,6 +276,7 @@ The complexity (efficiency) of common operations on deques is as follows:
 Formally, a deque supports all the functions that a vector supports. The difference between a deque and a vector is that deques do not guarantee that their elements are contiguous in memory, so accessing may not be as efficient.
 
 ## Ways to Declare a Deque
+
 ### Syntax
 ```cpp
 deque<int> dq; /* Empty */
@@ -320,9 +321,9 @@ priority_queue< data_type > priority_queue_name;
 priority_queue< data_type, vector< data_type >, greater< data_type > > priority_queue_name;
 ```
 
-# Examples
+## Examples
 
-## Max Priority Queue
+### Max Priority Queue
 ```cpp
 priority_queue<int> q; // max priority_queue of int's
 priority_queue<string> q; // max priority_queue of strings
@@ -330,7 +331,7 @@ priority_queue<pair<int, int>> q; // max priority_queue of pairs
 priority_queue<vector<int>> q; // max priority_queue of vectors
 ```
 
-## Min Priority Queue
+### Min Priority Queue
 ```cpp
 priority_queue<int, vector<int>, greater<int>> q; // min priority_queue of int's
 priority_queue<string, vector<string>, greater<string>> q; // min priority_queue of strings
@@ -373,7 +374,7 @@ while (!pq.empty()) {
 }
 ```
 
-Priority Queue Sample Program
+*Priority Queue Sample Program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -444,7 +445,7 @@ for (auto x : st) {
 }
 ```
 
-# Sample Program - Understanding Set in C++
+## Sample Program - Understanding Set in C++
 
 ```cpp
 #include <bits/stdc++.h>
@@ -495,7 +496,7 @@ An `unordered_set` is similar to the set data structure and won't allow duplicat
 unordered_set< data_type > st;
 ```
 
-## Examples
+### Examples
 
 ```cpp
 unordered_set<int> st;        // unordered_set of int's
@@ -535,7 +536,7 @@ unordered_set<vector<int>> st;       // unordered_set of vectors
   - Removes all set elements.
   - **Time Complexity:** O(n)
 
-### Accessing unordered_set elements
+## Accessing unordered_set elements
 
 Since it won't provide indexing, we cannot directly access any element. The below is the way to traverse the unordered_set.
 
@@ -593,14 +594,14 @@ Implemented using Binary search tree (Red-black trees).
 
 ## Declaring multiset
 
-**Syntax**
+### Syntax
 
 ```cpp
 multiset< data_type > st; // Stores keys in ascending order
 multiset< data_type, greater< data_type > > st; // Stores keys in descending order
 ```
 
-# Examples
+### Examples
 
 ```cpp
 multiset<int> st; // Multiset of int's
@@ -611,7 +612,7 @@ multiset<vector<int>> st; // Multiset of vectors
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
-# Important Functions on Multiset
+## Important Functions on Multiset
 
 - `st.insert( key );` // Inserts the element into the multiset. TC - 𝓞(logn)
 - `st.erase( key );` // Removes all occurrences of the specified key if present. TC - 𝓞(logn)
@@ -690,13 +691,13 @@ Implemented using Hash Tables.
 
 ## Declaring Multiset
 
-**Syntax:**
+### Syntax
 
 ```cpp
 unordered_multiset< data_type > st;
 ```
 
-# Examples
+### Examples
 
 ```cpp
 unordered_multiset<int> st;                // unordered_multiset of int's
@@ -707,7 +708,7 @@ unordered_multiset<vector<int>> st;        // unordered_multiset of vectors
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
-# Important functions on unordered_multiset
+## Important functions on unordered_multiset
 
 - `st.insert( key );` 
   - Inserts the element into the multiset.
@@ -755,7 +756,7 @@ for (auto x : st) {
 }
 ```
 
-# Sample Program Explained
+## Sample Program Explained
 
 ```cpp
 #include <bits/stdc++.h>
@@ -823,11 +824,13 @@ Implemented using Binary Search Trees (Red-Black Trees).
 
 ## Declaring a Map
 
+### Syntax
+
 ```cpp
 map<key_data_type, value_data_type> mp; // keys are unique and sorted in ASC
 ```
 
-# Examples
+### Examples
 
 ```cpp
 map<int, int> mp;
@@ -838,7 +841,7 @@ map<string, vector<int>> mp;
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
-# Important functions
+## Important functions
 
 - `mp[key] = value;`  
   Inserts key-value pair if not present. If present, updates the key with the current value.  
@@ -902,7 +905,7 @@ for(auto it = mp.rbegin() ; it != mp.rend() ; it++){
 }
 ```
 
-# Sample Program to Understand Maps in C++
+## Sample Program to Understand Maps in C++
 
 ```cpp
 #include <bits/stdc++.h>
@@ -969,7 +972,7 @@ unordered_map<string, vector<int>> mp;
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
-# Important Functions
+## Important Functions
 
 - `mp[key] = value;`  
   Inserts key->value pair if not present. If present, updates the key with the current value.
@@ -1092,13 +1095,13 @@ Implemented using Binary Search Trees (Red-Black Trees).
 
 ## Declaring Multimap
 
-Syntax:
+### Syntax:
 
 ```cpp
 multimap<key_data_type, value_data_type> mp; // keys are sorted in ascending order
 ```
 
-## Examples
+### Examples
 
 ```cpp
 multimap<int, int> mp;                // multimap of int's
@@ -1200,12 +1203,13 @@ Keys in an `unordered_multimap` are not sorted, meaning there is no particular o
 
 ## Declaring multimap
 
-Syntax:
+### Syntax
+
 ```cpp
 unordered_multimap<key_data_type, value_data_type> mp; // keys are not sorted i.e no particular order
 ```
 
-## Examples
+### Examples
 
 ```cpp
 unordered_multimap<int, int> mp;
@@ -1217,7 +1221,7 @@ unordered_multimap<string, vector<int>> mp;
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
 
-# Important Functions
+## Important Functions
 
 - `mp.insert(make_pair(key, value));`  
   Inserts a new key-value pair.  
