@@ -404,3 +404,932 @@ int main() {
 }
 ```
 
+# SET IN C++
+
+A set data structure won't allow duplicate keys. Keys are sorted in ascending order by default. We can also change the order by passing extra arguments during its declaration. Implemented using Binary search tree (Red-Black trees).
+
+## Declaring set
+
+### Syntax
+
+- `set< data_type > st;` // stores keys in ascending order
+- `set< data_type, greater< data_type > > st;` // stores keys in descending order
+
+### Examples
+
+- `set<int> st;` // set of int's
+- `set<string> st;` // set of strings
+- `set<pair<int, int>> st;` // set of pairs
+- `set<vector<int>> st;` // set of vectors
+
+
+Note: Similar syntax for char, long long int, float, double, long double, and some other data types include user-defined data types.
+
+## Important functions on set
+
+- `st.insert( key );` // Inserts the element into the set (if not present). TC - 𝓞(logn)
+- `st.erase( key );` // Removes the specified key if present. TC - 𝓞(logn)
+- `st.find( key );` // Returns an iterator pointing to the key; if the key is not present, returns st.end(). TC - 𝓞(logn)
+- `st.size();` // Returns the size of the set. TC - 𝓞(1)
+- `st.empty();` // Returns true if the set is empty, else false. TC - 𝓞(1)
+- `st.clear();` // Removes all set elements. TC - 𝓞(n)
+
+## Accessing set elements
+
+Since it won't provide indexing, we cannot directly access any element. The below is the way to traverse the set.
+
+```cpp
+for (auto x : st) {
+    cout << x << " ";  // Prints each key in ascending order
+}
+```
+
+# Sample Program - Understanding Set in C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    set<int> st;
+
+    // Inserting data into the set
+    st.insert(1);    // Inserts 1 into the set
+    st.insert(1);    // Since 1 is already present, it won't insert 1 again into the set
+    st.insert(5);    // Inserts 5 into the set
+    st.insert(10);   // Inserts 10 into the set
+    st.insert(15);   // Inserts 15 into the set
+    st.insert(5);     // Since 5 is already present, it won't insert 5 again into the set
+
+    if (st.find(100) != st.end()) {
+        cout << "Key is present ";
+    } else {
+        cout << "Key is not present "; // Prints "Key is not present"
+    }
+
+    if (st.find(1) != st.end()) {
+        cout << "Key is present "; // Prints "Key is present" since 1 is present in the set
+    } else {
+        cout << "Key is not present ";
+    }
+
+    st.erase(1); // Removes 1 from the set
+
+    cout << st.size() << " "; // Prints 3
+    cout << st.empty(); // Prints false | 0
+    st.clear(); // Removes all elements.
+
+    return 0;
+}
+```
+
+
+# Unordered Set in C++
+
+An `unordered_set` is similar to the set data structure and won't allow duplicate keys. However, the keys are not sorted in any order (No order), and hence the ordering of elements cannot be expected. It is implemented using Hash Tables, making it faster in insertion/removal/find operations than a set in the average case (Average Time Complexity - O(1), Worst Time Complexity - O(n)).
+
+## Declaring unordered_set
+
+### Syntax
+```cpp
+unordered_set< data_type > st;
+```
+
+## Examples
+
+```cpp
+unordered_set<int> st;        // unordered_set of int's
+unordered_set<string> st;     // unordered_set of strings
+unordered_set<pair<int, int>> st;    // unordered_set of pairs
+unordered_set<vector<int>> st;       // unordered_set of vectors
+```
+
+*Note: Similar syntax for char, long long int, float, double, long double, and some other data types include user-defined data types.*
+
+## Important functions on unordered_set
+
+- `st.insert(key);`
+  - Inserts the element 'key' into the set (if not present).
+  - **Average Time Complexity:** 𝓞(1)
+  - **Worst Time Complexity:** O(n)
+
+- `st.erase(key);`
+  - Removes the specified key if present.
+  - **Average Time Complexity:** 𝓞(1)
+  - **Worst Time Complexity:** O(n)
+
+- `st.find(key);`
+  - Returns an iterator pointing to the key. If the key is not present, returns `st.end()`.
+  - **Average Time Complexity:** 𝓞(1)
+  - **Worst Time Complexity:** O(n)
+
+- `st.size();`
+  - Returns the size of the set.
+  - **Time Complexity:** 𝓞(1)
+
+- `st.empty();`
+  - Returns true if the set is empty, else false.
+  - **Time Complexity:** 𝓞(1)
+
+- `st.clear();`
+  - Removes all set elements.
+  - **Time Complexity:** O(n)
+
+### Accessing unordered_set elements
+
+Since it won't provide indexing, we cannot directly access any element. The below is the way to traverse the unordered_set.
+
+```cpp
+for (auto x : st) {
+    cout << x << " ";  // prints each key in ascending order
+}
+```
+
+```cpp
+// Lets understand by sample program
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    unordered_set<int> st;
+    
+    // Inserting data into the set
+    st.insert(1);    // Inserts 1 into set
+    st.insert(1);    // Since 1 is already present, it won't insert 1 again into set
+    st.insert(5);    // Inserts 5 into set
+    st.insert(10);   // Inserts 10 into set
+    st.insert(15);   // Inserts 15 into set
+    st.insert(5);     // Since 5 is already present, it won't insert 5 again into set
+    
+    if (st.find(100) != st.end()) {
+        cout << " Key is present ";
+    } else {
+        cout << " Key is not present "; // Prints "Key is not present"
+    }
+    
+    if (st.find(1) != st.end()) {
+        cout << " Key is present "; // Prints "Key is present" since 1 is present in set
+    } else {
+        cout << " Key is not present "; 
+    }
+    
+    st.erase(1); // 1 removed from set
+
+    cout << st.size() << " "; // Prints 3
+    cout << st.empty(); // Prints false | 0
+    st.clear(); // Removes all elements.
+    
+    return 0;
+}
+```
+
+# MULTISET IN C++
+
+A multiset data structure allows multiple keys with the same values.
+Keys are sorted in ascending order by default. We can also change the order by passing extra arguments during its declaration.
+Implemented using Binary search tree (Red-black trees).
+
+## Declaring multiset
+
+**Syntax**
+
+```cpp
+multiset< data_type > st; // Stores keys in ascending order
+multiset< data_type, greater< data_type > > st; // Stores keys in descending order
+```
+
+# Examples
+
+```cpp
+multiset<int> st; // Multiset of int's
+multiset<string> st; // Multiset of strings
+multiset<pair<int, int>> st; // Multiset of pairs
+multiset<vector<int>> st; // Multiset of vectors
+```
+
+Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
+
+# Important Functions on Multiset
+
+- `st.insert( key );` // Inserts the element into the multiset. TC - 𝓞(logn)
+- `st.erase( key );` // Removes all occurrences of the specified key if present. TC - 𝓞(logn)
+- `st.erase( st.find( key ) );` // Removes only one occurrence of the specified key if present. TC - 𝓞(logn)
+- `st.find( key );` // Returns an iterator pointing to the key; if the key is not present, returns `st.end()`. TC - 𝓞(logn)
+- `st.count( key );` // Returns the frequency of the specified key. TC - 𝓞(logn)
+- `st.size();` // Returns the size of the multiset. TC - 𝓞(1)
+- `st.empty();` // Returns true if the multiset is empty; else, false. TC - 𝓞(1)
+- `st.clear();` // Removes all multiset elements. TC - O(n)
+
+## Accessing Multiset Elements
+Since it won't provide indexing, we cannot directly access any element. The below is the way to traverse the multiset.
+
+```cpp
+for( auto x : st ){
+    cout << x << " ";  // Prints each key in ascending order
+}
+```
+
+## Sample Program
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    multiset<int> st;
+    
+    // Inserting data into the multiset
+    st.insert(1);    // Inserts 1 into the multiset
+    st.insert(1);    // Inserts 1 into the multiset
+    st.insert(1);    // Inserts 1 into the multiset
+    st.insert(5);    // Inserts 5 into the multiset
+    st.insert(10);   // Inserts 10 into the multiset
+    st.insert(15);   // Inserts 15 into the multiset
+    st.insert(5);     // Inserts 5 into the multiset
+    
+    if( st.find(100) != st.end()){
+        cout << " Key is present " << " ";
+    }
+    else {
+        cout << " Key is not present "; // Prints key is not present
+    }
+    
+    if( st.find(1) != st.end()){
+        cout << " Key is present " << ; // Prints key is present since 1 is present in the multiset
+    }
+    else {
+        cout << " Key is not present "; 
+    }
+    
+    cout << st.count( 1 ) ; // Prints 3
+    
+    st.erase( st.find(1) ); // Removes one occurrence of 1
+    
+    cout << st.count(1) ; // Prints 2
+    
+    st.erase( 1 ); // Removes all occurrences of 1
+    
+    cout << st.count(1) ; // Prints 0
+    
+    cout << st.size() << " "; // Prints 4
+    cout << st.empty(); // Prints false | 0
+    st.clear(); // Removes all elements.
+    
+    return 0;
+}
+```
+
+# Unordered Multiset in C++
+
+An `unordered_multiset` data structure allows multiple keys with the same values.
+Keys are not sorted, i.e., there is no particular order.
+Implemented using Hash Tables.
+
+## Declaring Multiset
+
+**Syntax:**
+
+```cpp
+unordered_multiset< data_type > st;
+```
+
+# Examples
+
+```cpp
+unordered_multiset<int> st;                // unordered_multiset of int's
+unordered_multiset<string> st;             // unordered_multiset of strings
+unordered_multiset<pair<int, int>> st;     // unordered_multiset of pairs
+unordered_multiset<vector<int>> st;        // unordered_multiset of vectors
+```
+
+Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
+
+# Important functions on unordered_multiset
+
+- `st.insert( key );` 
+  - Inserts the element into the multiset.
+  - Average Time Complexity: 𝓞(1)
+  - Worst Time Complexity: 𝓞(n)
+  
+- `st.erase( key );`
+  - Removes all occurrences of the specified key if present.
+  - Average Time Complexity: 𝓞(1)
+  - Worst Time Complexity: 𝓞(n)
+
+- `st.erase( st.find( key ) );`
+  - Removes only one occurrence of the specified key if present.
+  - Average Time Complexity: 𝓞(1)
+  - Worst Time Complexity: 𝓞(n)
+
+- `st.find( key );`
+  - Returns an iterator pointing to the key. If the key is not present, returns `st.end()`.
+  - Average Time Complexity: 𝓞(1)
+  - Worst Time Complexity: 𝓞(n)
+
+- `st.count( key ) ;`
+  - Returns the frequency of the specified key.
+  - Average Time Complexity: 𝓞(1)
+  - Worst Time Complexity: 𝓞(n)
+
+- `st.size();`
+  - Returns the size of the multiset.
+  - Time Complexity: 𝓞(1)
+
+- `st.empty();`
+  - Returns true if the multiset is empty, else false.
+  - Time Complexity: 𝓞(1)
+
+- `st.clear();`
+  - Removes all multiset elements.
+  - Time Complexity: 𝓞(n)
+
+## Accessing multiset elements
+Since it doesn't provide indexing, we cannot directly access any element. You can traverse the multiset using the following loop:
+
+```cpp
+for (auto x : st) {
+    cout << x << " ";  // prints each key in ascending order
+}
+```
+
+# Sample Program Explained
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    unordered_multiset<int> st;
+    
+    // Inserting data into the multiset
+    st.insert(1);    // inserts 1 into multiset
+    st.insert(1);    // inserts 1 into multiset
+    st.insert(1);    // inserts 1 into multiset
+    st.insert(5);    // inserts 5 into multiset
+    st.insert(10);   // inserts 10 into multiset
+    st.insert(15);   // inserts 15 into multiset
+    st.insert(5);     // inserts 5 into multiset
+    
+    // Checking if 100 is present in the multiset
+    if (st.find(100) != st.end()) {
+        cout << "Key is present ";
+    } else {
+        cout << "Key is not present "; // prints key is not present
+    }
+    
+    // Checking if 1 is present in the multiset
+    if (st.find(1) != st.end()) {
+        cout << "Key is present ";
+    } else {
+        cout << "Key is not present ";
+    }
+    
+    // Counting occurrences of 1 in the multiset
+    cout << st.count(1); // prints 3
+    
+    // Removing one occurrence of 1 from the multiset
+    st.erase(st.find(1));
+    
+    // Counting occurrences of 1 in the multiset after removal
+    cout << st.count(1); // prints 2
+    
+    // Removing all occurrences of 1 from the multiset
+    st.erase(1);
+    
+    // Counting occurrences of 1 in the multiset after removal
+    cout << st.count(1); // prints 0
+    
+    // Printing the size of the multiset
+    cout << st.size() << " "; // prints 4
+    
+    // Printing whether the multiset is empty or not
+    cout << st.empty(); // prints false | 0
+    
+    // Removing all elements from the multiset
+    st.clear(); // removes all elements.
+    
+    return 0;
+}
+```
+
+# MAPS IN C++
+
+A map is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value, effectively storing key-value pairs.
+Keys are unique and sorted in ascending order by default.
+Implemented using Binary Search Trees (Red-Black Trees).
+
+## Declaring a Map
+
+```cpp
+map<key_data_type, value_data_type> mp; // keys are unique and sorted in ASC
+```
+
+# Examples
+
+```cpp
+map<int, int> mp;
+map<int, string> mp;
+map<int, vector<int>> mp;
+map<string, vector<int>> mp;
+```
+
+Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
+
+# Important functions
+
+- `mp[key] = value;`  
+  Inserts key-value pair if not present. If present, updates the key with the current value.  
+  TC - O(logn)
+
+- `int a = mp[key];`  
+  Returns the value at the specified key. If key is not present, it returns the default value and adds key->default_value into the map.  
+  TC - O(logn)
+
+- `mp.insert({key, value});`  
+  Inserts a new key-value pair if the key is not present. If present, it won't add this key-value pair and won't update.  
+
+- `mp.insert(make_pair(key, value));`  
+  Inserts a new key-value pair if the key is not present. If present, it won't add this key-value pair and won't update.
+
+- `mp.insert(pair<int, int>(5, 7));`  
+  Inserts a new key-value pair if the key is not present. If present, it won't add this key-value pair and won't update.
+
+- `mp.erase(key);`  
+  Removes the specified entry with the specified key if present.  
+  TC - O(logn)
+
+- `mp.count(key);`  
+  Returns the frequency of the key (0 or 1).  
+  TC - O(logn)
+
+- `mp.find(key);`  
+  Returns the iterator pointing to the key if present, else returns mp.end().  
+  TC - O(logn)
+
+- `mp.clear();`  
+  Removes all entries from the map.  
+  TC - O(n)
+
+- `mp.size();`  
+  Returns the size of the map.  
+  TC - O(1)
+
+- `mp.empty();`  
+  Returns true if the map is empty, else false.  
+  TC - O(1)
+
+## Traversing through map
+
+### First way
+```cpp
+for(auto ele : mp){
+    cout << ele.first << " " << ele.second << "\n";
+}
+```
+### Second way
+```cpp
+for(auto it = mp.begin() ; it != mp.end() ; it++){
+    cout << it->first <<  " " << it->second << "\n";
+}
+```
+### Third way
+```cpp
+for(auto it = mp.rbegin() ; it != mp.rend() ; it++){
+    cout << it->first << " " << it->second << "\n";
+}
+```
+
+# Sample Program to Understand Maps in C++
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // your code goes here
+    map<int, int> mp; // creates an empty map ---> []
+    mp[5] = 10;    // since key = 5 is not present, adds the entry with key as 5 and value as 10 ---> [5->10]
+    mp[5] = 9; // key = 5 is present hence it updates with current value ---> [5->9]
+    mp.insert(pair<int, int>(3, 7)); // since key = 3 is not present, adds the entry 3->7 ----> [3->7, 5->9]
+    mp.insert(pair<int, int>(5, 8)); // since key = 5 is present, it won't add and update the entry. ---> [3->7, 5->9]
+    mp.insert(make_pair(8, 1)); // since key = 8 is not present, adds the entry 8->1 ----> [3->7, 5->9, 8->1]
+    mp.insert(make_pair(8, 2)); // since key = 8 is present, it won't add and update the entry. ---> [3->7, 5->9, 8->1]
+    mp.insert({6, 11}); // since key = 6 is not present, adds the entry 6->11 ----> [3->7, 5->9, 6->11, 8->1]
+    mp.insert({6, 99}); // since key = 6 is present, it won't add and update the entry. ---> [3->7, 5->9, 6->11, 8->1]
+    cout << "size is " << mp.size() << "\n"; // prints 4
+    mp.erase(5); // removes entry whose key = 5 i.e 5->9. ---> [3->7, 6->11, 8->1]
+    mp.erase(100); // removes entry whose key = 100, but there is no entry matching this. So nothing will happen. ---> [3->7, 6->11, 8->1]
+    cout << "value at key = 8 is " << mp[8] << "\n"; // prints the value at key = 8 i.e 1 
+    cout << "value at key = 99 is " << mp[99] << "\n"; // since there is no key = 99 it adds entry 99->0 (0 is the default value) and prints 0. ---> [3->7, 6->11, 8->1, 99->0]
+    cout << "Frequency of entry whose key = 3 is " << mp.count(3) << "\n";
+
+    if (mp.find(12) != mp.end())
+        cout << "Key = 12 is present \n";
+    else
+        cout << "key = 12 is not present\n";
+
+    if (mp.find(99) != mp.end())
+        cout << "Key = 99 is present \n";
+    else
+        cout << "key = 99 is not present\n";
+
+    // printing map
+    cout << "map entries are: \n";
+    for (auto it = mp.begin(); it != mp.end(); it++) {
+        cout << it->first << "->" << it->second << "\n";
+    }
+    return 0;
+}
+```
+
+# UNORDERED MAPS IN C++
+
+An `unordered_map` is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value. Essentially, it stores key-value pairs. Keys are unique and do not have a particular order.
+
+Implemented using Hash tables.
+
+## Declaring map
+
+### Syntax
+```cpp
+unordered_map<key_data_type, value_data_type> mp; // keys are unique and not have a particular order
+```
+
+### Examples
+
+```cpp
+unordered_map<int, int> mp;
+unordered_map<int, string> mp;
+unordered_map<int, vector<int>> mp;
+unordered_map<string, vector<int>> mp;
+```
+
+Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
+
+# Important Functions
+
+- `mp[key] = value;`  
+  Inserts key->value pair if not present. If present, updates the key with the current value.
+  - Average TC: O(1)
+  - Worst TC: O(n)
+
+- `int a = mp[key];`  
+  Returns the value at the specified key. If the key is not present, it returns the default value and adds key->default_value into the map.
+  - Average TC: O(1)
+  - Worst TC: O(n)
+
+- `mp.insert(make_pair(key, value));`  
+  Inserts a new key-value pair if the key is not present. If present, it won't add this key-value pair and won't update.
+  - Average TC: O(1)
+  - Worst TC: O(n)
+
+- `mp.insert({key, value});`  
+  Inserts a new key-value pair if the key is not present. If present, it won't add this key-value pair and won't update.
+  - Average TC: O(1)
+  - Worst TC: O(n)
+
+- `mp.insert(pair<int, int>(5, 7));`  
+  Inserts a new key-value pair if the key is not present. If present, it won't add this key-value pair and won't update.
+  - Average TC: O(1)
+  - Worst TC: O(n)
+
+- `mp.erase(key);`  
+  Removes the specified entry with the specified key if present.
+  - Average TC: O(1)
+  - Worst TC: O(n)
+
+- `mp.count(key);`  
+  Returns the frequency of the key (0 or 1).
+  - Average TC: O(1)
+  - Worst TC: O(n)
+
+- `mp.find(key);`  
+  Returns the position of the key if present, else returns `mp.end()`.
+  - Average TC: O(1)
+  - Worst TC: O(n)
+
+- `mp.clear();`  
+  Removes all entries from the map.
+  - TC: O(n)
+
+- `mp.size();`  
+  Returns the size of the map.
+  - TC: O(1)
+
+- `mp.empty();`  
+  Returns true if the map is empty, else false.
+  - TC: 𝓞(1)
+
+## Traversing through Map
+
+### First Way
+```cpp
+for(auto ele : mp){
+    cout << ele.first << " " << ele.second << "\n";
+}
+```
+### Second way
+```cpp
+for(auto it = mp.begin() ; it != mp.end() ; it++){
+    cout << it->first <<  " " << it->second << "\n";
+}
+```
+### Third way
+```cpp
+for(auto it = mp.rbegin() ; it != mp.rend() ; it++){
+    cout << it->first << " " << it->second << "\n";
+}
+```
+
+## Understanding Unordered Map in C++
+
+Let's understand with a sample program:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    unordered_map<int, int> mp; // creates an empty map ---> []
+    mp[5] = 10;    // since key = 5 is not present, adds the entry with key as 5 and value as 10 ---> [5->10]
+    mp[5] = 9; // key = 5 is present hence it updates with the current value ---> [5->9]
+    mp.insert(pair<int, int>(3, 7)); // since k = 3 is not present adds the entry 3->7 ----> [5->9, 3->7] (Note: order is not guaranteed)
+    mp.insert(pair<int, int>(5, 8)); // since key = 5 is present it won't add and update the entry. ---> [3->7, 5->9] (Note: order is not guaranteed)
+    mp.insert(make_pair(8, 1)); // since key = 8 is not present adds the entry 8->1 ----> [3->7, 5->9, 8->1] (Note: order is not guaranteed)
+    mp.insert(make_pair(8, 2)); // since key = 8 is present it won't add and update the entry. ---> [3->7, 5->9, 8->1] (Note: order is not guaranteed)
+    mp.insert({6, 11}); // since key = 6 is not present adds the entry 6->11 ----> [3->7, 5->9, 6->11, 8->1] (Note: order is not guaranteed)
+    mp.insert({6, 99}); // since key = 6 is present it won't add and update the entry. ---> [6->11, 8->1, 5->9, 3->7] (Note: order is not guaranteed)
+    cout << "size is " << mp.size() << "\n"; // prints 4
+    mp.erase(5); // removes entry whose key = 5 i.e 5->9. ---> [3->7, 8->1, 6->11] (Note: order is not guaranteed)
+    mp.erase(100); // removes entry whose key = 100, but there is no entry matching this. So nothing will happen. ---> [3->7, 6->11, 8->1] (Note: order is not guaranteed)
+    cout << "value at key = 8 is " << mp[8] << "\n"; // prints the value at key = 8 i.e 1 
+    cout << "value at key = 99 is " << mp[99] << "\n"; // since there is no key = 99 it adds entry 99->0 (0 is the default value) and prints 0. ---> [3->7, 6->11, 8->1, 99->0] (Note: order is not guaranteed)
+    cout << "Frequency of entry whose key = 3 is " << mp.count(3) << "\n";
+
+    if(mp.find(12) != mp.end()) cout << "Key = 12 is present \n";
+    else cout << "key = 12 is not present\n";
+
+    if(mp.find(99) != mp.end()) cout << "Key = 99 is present \n";
+    else cout << "key = 99 is not present\n";
+
+    // printing map
+    cout << "map entries are: \n" ;
+    for(auto it = mp.begin() ; it != mp.end() ; it++){
+        cout << it->first << "->" << it->second << "\n";
+    }
+    return 0;
+}
+```
+
+# Multimaps in C++
+
+A multimap is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value, essentially storing key-value pairs. The multimap is similar to a map, with the addition that multiple elements can have the same keys. Keys are sorted in ascending order by default.
+
+Implemented using Binary Search Trees (Red-Black Trees).
+
+## Declaring Multimap
+
+Syntax:
+
+```cpp
+multimap<key_data_type, value_data_type> mp; // keys are sorted in ascending order
+```
+
+## Examples
+
+```cpp
+multimap<int, int> mp;                // multimap of int's
+multimap<int, string> mp;             // multimap of strings
+multimap<int, vector<int>> mp;        // multimap of vectors
+multimap<string, vector<int>> mp;     // multimap of vectors
+```
+
+Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
+
+## Important functions
+
+```cpp
+mp.insert(make_pair(key, value));        // inserts new key-value pair      TC - O(logn)
+mp.insert({key, value});                 // inserts new key-value pair       TC - O(logn)
+mp.insert(pair<int, int>(5, 7));          // inserts new key-value pair       TC - O(logn)
+mp.erase(key);                            // removes all occurrences of entries with specified key if present.      TC - O(logn)
+mp.erase(mp.find(key));                   // removes one occurrence of entry with specified key if present.      TC - O(logn)
+mp.count(key);                            // returns frequency of key      TC - O(logn)
+mp.find(key);                             // returns pos of key if present. else return mp.end()      TC - O(logn)
+mp.clear();                               // removes all entries from the map      TC - O(n)
+mp.size();                                // returns the size of map      TC - O(1)
+mp.empty();                               // returns true if map is empty else false    TC - 𝓞(1)
+```
+
+## Traversing through map
+
+### First way
+```cpp
+for(auto ele : mp){
+    cout << ele.first << " " << ele.second << "\n";
+}
+```
+
+### Second way
+```cpp
+for(auto it = mp.begin(); it != mp.end(); it++){
+    cout << it->first << " " << it->second << "\n";
+}
+```
+
+### Third way
+```cpp
+for(auto it = mp.rbegin(); it != mp.rend(); it++){
+    cout << it->first << " " << it->second << "\n";
+}
+```
+
+## Lets understand by sample program
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // your code goes here
+    multimap<int, int> mp; // creates an empty map ---> []
+
+    mp.insert(pair<int, int>(3, 7));   // adds the entry 3->7 ----> [3->7]
+    mp.insert(pair<int, int>(5, 8));   // adds the entry 5->8---> [3->7, 5->8]
+    mp.insert(make_pair(8, 1));        // adds the entry 8->1.---> [3->7, 5->8, 8->1]
+    mp.insert(make_pair(8, 2));        // adds the entry 8->2.---> [3->7, 5->8, 8->1, 8->2]
+    mp.insert({6, 11});                // adds the entry 6->11.---> [3->7, 5->8, 6->11, 8->1, 8->2]
+    mp.insert({6, 99});                // adds the entry 6->11.---> [3->7, 5->8, 6->11, 6->99, 8->1, 8->2]
+    mp.insert({6, 15});                // adds the entry 6->15.---> [3->7, 5->8, 6->11, 6->99, 6->15, 8->1, 8->2]
+    cout << "size is " << mp.size() << "\n"; // prints 7
+    cout << "Frequency of entry whose key = 6 is " << mp.count(6) << "\n";
+    auto it = mp.begin();
+    while(it != mp.end()){
+        if(it->first == 6 && it->second == 11) break;
+        it++;
+    }
+    mp.erase(it); // removes entry that 'it' points i.e 6->11. ---> [3->7, 5->8, 6->99, 6->15, 8->1, 8->2]
+    cout << "Frequency of entry whose key = 6 after removing one occurrence is " << mp.count(6) << "\n";
+    mp.erase(6);  // removes all occurrences of entry's whose keys = 6 ---> [3->7, 5->8, 8->1, 8->2]
+    cout << "Frequency of entry whose key = 6 after removing all occurrences is " << mp.count(6) << "\n";
+    mp.erase(100); // since there is no key = 100, nothing will be removed ---> [3->7, 5->8, 8->1, 8->2]
+
+    if(mp.find(12) != mp.end()) cout << "Key = 12 is present \n";
+    else cout << "key = 12 is not present\n";
+
+    if(mp.find(8) != mp.end()) cout << "Key = 8 is present \n";
+    else cout << "key = 99 is not present\n";
+
+    // printing map
+    cout << "map entry's are: \n" ;
+    for(auto it = mp.begin() ; it != mp.end() ; it++){
+        cout << it->first << "->" << it->second << "\n";
+    }
+    return 0;
+}
+```
+
+# UNORDERED MULTIMAPS IN C++
+
+An `unordered_multimap` is a data structure that stores elements in a mapped fashion. Each element has a key value and mapped value, essentially storing key-value pairs. Similar to a map, a multimap allows multiple elements to have the same keys.
+
+Keys in an `unordered_multimap` are not sorted, meaning there is no particular order. This data structure is implemented using Hash Tables.
+
+## Declaring multimap
+
+Syntax:
+```cpp
+unordered_multimap<key_data_type, value_data_type> mp; // keys are not sorted i.e no particular order
+```
+
+## Examples
+
+```cpp
+unordered_multimap<int, int> mp;
+unordered_multimap<int, string> mp;
+unordered_multimap<int, vector<int>> mp;
+unordered_multimap<string, vector<int>> mp;
+```
+
+Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
+
+
+# Important Functions
+
+- `mp.insert(make_pair(key, value));`  
+  Inserts a new key-value pair.  
+  - Average Time Complexity: O(1)  
+  - Worst Time Complexity: O(n)
+
+- `mp.insert({key, value});`  
+  Inserts a new key-value pair.  
+  - Average Time Complexity: O(1)  
+  - Worst Time Complexity: O(n)
+
+- `mp.insert(pair<int, int>(5, 7));`  
+  Inserts a new key-value pair.  
+  - Average Time Complexity: O(1)  
+  - Worst Time Complexity: O(n)
+
+- `mp.erase(key);`  
+  Removes all occurrences of entries with the specified key if present.  
+  - Average Time Complexity: O(1)  
+  - Worst Time Complexity: O(n)
+
+- `mp.erase(mp.find(key));`  
+  Removes one occurrence of the entry with the specified key if present.  
+  - Average Time Complexity: O(1)  
+  - Worst Time Complexity: O(n)
+
+- `mp.count(key);`  
+  Returns the frequency of the key.  
+  - Average Time Complexity: O(1)  
+  - Worst Time Complexity: O(n)
+
+- `mp.find(key);`  
+  Returns the position of the key if present, otherwise returns `mp.end()`.  
+  - Average Time Complexity: O(1)  
+  - Worst Time Complexity: O(n)
+
+- `mp.clear();`  
+  Removes all entries from the map.  
+  - Time Complexity: O(n)
+
+- `mp.size();`  
+  Returns the size of the map.  
+  - Time Complexity: O(1)
+
+- `mp.empty();`  
+  Returns true if the map is empty; otherwise, false.  
+  - Time Complexity: 𝓞(1)
+
+## Traversing through unordered_multimap
+
+### First Way
+```cpp
+for(auto ele : mp){
+    cout << ele.first << " " << ele.second << "\n";
+}
+```
+
+### Second way
+```cpp
+for(auto it = mp.begin() ; it != mp.end() ; it++){
+    cout << it->first <<  " " << it->second << "\n";
+}
+```
+
+### Third way
+```cpp
+for(auto it = mp.rbegin() ; it != mp.rend() ; it++){
+    cout << it->first << " " << it->second << "\n";
+}
+```
+
+## Lets understand by sample program
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // your code goes here
+    unordered_multimap<int, int> mp; // creates an empty map ---> []
+
+    mp.insert(pair<int, int>(3, 7)); // adds the entry 3->7 ----> [3->7] (Note: Order of elements is not expected)
+    mp.insert(pair<int, int>(5, 8)); // adds the entry 5->8---> [3->7, 5->8] (Note: Order of elements is not expected)
+    mp.insert(make_pair(8, 1)); // adds the entry 8->1.---> [3->7, 5->8, 8->1] (Note: Order of elements is not expected)
+    mp.insert(make_pair(8, 2)); // adds the entry 8->2.---> [3->7, 5->8, 8->1, 8->2] (Note: Order of elements is not expected)
+    mp.insert({6, 11}); // adds the entry 6->11.---> [3->7, 5->8, 6->11, 8->1, 8->2] (Note: Order of elements is not expected)
+    mp.insert({6, 99}); // adds the entry 6->11.---> [3->7, 5->8, 6->11, 6->99, 8->1, 8->2] (Note: Order of elements is not expected)
+    mp.insert({6, 15}); // adds the entry 6->15.---> [3->7, 5->8, 6->11, 6->99, 6->15, 8->1, 8->2] (Note: Order of elements is not expected)
+    cout << "size is " << mp.size() << "\n"; // prints 7
+    cout << "Frequency of entry whose key = 6 is " << mp.count(6) << "\n";
+    auto it = mp.begin();
+    while(it != mp.end()){
+        if(it->second == 11) break;
+        it++;
+    }
+    mp.erase(it); // removes the entry that 'it' points i.e 6->11. ---> [3->7, 5->8, 6->99, 6->15, 8->1, 8->2]
+    cout << "Frequency of entry whose key = 6 after removing one occurrence is " << mp.count(6) << "\n";
+    mp.erase(6); // removes all occurrences of entries whose keys = 6 ---> [3->7, 5->8, 8->1, 8->2]
+    cout << "Frequency of entry whose key = 6 after removing all occurrences is " << mp.count(6) << "\n";
+    mp.erase(100); // since there is no key = 100, nothing will be removed ---> [3->7, 5->8, 8->1, 8->2]
+
+    if(mp.find(12) != mp.end()) cout << "Key = 12 is present \n";
+    else cout << "key = 12 is not present\n";
+
+    if(mp.find(8) != mp.end()) cout << "Key = 8 is present \n";
+    else cout << "key = 99 is not present\n";
+
+    // printing map
+    cout << "map entry's are: \n" ;
+    for(auto it = mp.begin() ; it != mp.end() ; it++){
+        cout << it->first << "->" << it->second << "\n";
+    }
+    return 0;
+}
+```
