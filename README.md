@@ -130,7 +130,8 @@ int main() {
 
 # STACK IN C++
 
-A stack is a linear data structure that follows the principle of Last In First Out (LIFO). This means the last element inserted inside the stack is removed first. It is defined inside `<stack>` header file (also available in `<bits/stdc++.h>`).
+- A stack is a linear data structure that follows the principle of `Last In First Out (LIFO)`. This means the last element inserted inside the stack is removed first.
+- It is defined inside `<stack>` header file (also available in `<bits/stdc++.h>`).
 
 ## Declaring a Stack
 
@@ -196,7 +197,8 @@ int main() {
 
 # QUEUE IN C++
 
-A queue is a linear data structure that follows the FIFO (First In First Out) principle, i.e., elements that are added first will be removed first. It is defined inside `<queue>` header file (also available in `<bits/stdc++.h>`).
+- A queue is a linear data structure that follows the `FIFO (First In First Out)` principle, i.e., elements that are added first will be removed first.
+- It is defined inside `<queue>` header file (also available in `<bits/stdc++.h>`).
 
 
 ## Declaring a Queue
@@ -304,9 +306,9 @@ deque<int> dq = { value1, value2, value3,...,valueN}; /* Deque with N values */
 
 # PRIORITY QUEUE IN C++
 
-A priority queue is a special type of queue in which each element is associated with a priority value, and elements are served based on their priority.
-It is defined inside the `<queue>` header file (also available in `<bits/stdc++.h>`).
-By default, C++ creates a max priority queue. We can change it to a min priority queue by passing additional parameters during declaration.
+- A priority queue is a special type of queue in which each element is associated with a priority value, and elements are served based on their priority.
+- It is defined inside the `<queue>` header file (also available in `<bits/stdc++.h>`).
+- By default, C++ creates a max priority queue. We can change it to a min priority queue by passing additional parameters during declaration.
 
 
 ## Syntax
@@ -393,7 +395,9 @@ int main() {
 
 # SET IN C++
 
-A set data structure won't allow duplicate keys. Keys are sorted in ascending order by default. We can also change the order by passing extra arguments during its declaration. Implemented using Binary search tree (Red-Black trees).
+- A set data structure `won't allow duplicate keys`.
+- Keys are sorted in ascending order by default. We can also change the order by passing extra arguments during its declaration.
+- Implemented using `Binary search tree` (Red-Black trees).
 
 ## Declaring set
 
@@ -473,7 +477,10 @@ int main() {
 
 # Unordered Set in C++
 
-An `unordered_set` is similar to the set data structure and won't allow duplicate keys. However, the keys are not sorted in any order (No order), and hence the ordering of elements cannot be expected. It is implemented using Hash Tables, making it faster in insertion/removal/find operations than a set in the average case (Average Time Complexity - O(1), Worst Time Complexity - O(n)).
+- An `unordered_set` is similar to the set data structure and won't allow duplicate keys.
+- The keys are `not sorted` in any order (No order), and hence the ordering of elements cannot be expected.
+- It is implemented using `Hash Tables`.
+- Faster in insertion / removal / find than set in average case i.e TC - O(1). ( worst case TC - O(n))
 
 ## Declaring unordered_set
 
@@ -574,9 +581,9 @@ int main() {
 
 # MULTISET IN C++
 
-A multiset data structure allows multiple keys with the same values.
-Keys are sorted in ascending order by default. We can also change the order by passing extra arguments during its declaration.
-Implemented using Binary search tree (Red-black trees).
+- A multiset data structure `allows multiple keys with the same values`.
+- Keys are sorted in ascending order by default. We can also change the order by passing extra arguments during its declaration.
+- Implemented using `Binary search tree` (Red-black trees).
 
 ## Declaring multiset
 
@@ -671,9 +678,9 @@ int main() {
 
 # Unordered Multiset in C++
 
-An `unordered_multiset` data structure allows multiple keys with the same values.
-Keys are not sorted, i.e., there is no particular order.
-Implemented using Hash Tables.
+- An `unordered_multiset` data structure allows multiple keys with the same values.
+- Keys are `not sorted`, i.e., there is no particular order.
+- Implemented using `Hash Tables`.
 
 ## Declaring Multiset
 
@@ -804,9 +811,9 @@ int main() {
 
 # MAPS IN C++
 
-A map is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value, effectively storing key-value pairs.
-Keys are unique and sorted in ascending order by default.
-Implemented using Binary Search Trees (Red-Black Trees).
+- A map is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value, effectively storing `key-value pairs`.
+- Keys are unique and sorted in ascending order by default.
+- Implemented using `Binary Search Trees` (Red-Black Trees).
 
 ## Declaring a Map
 
@@ -936,9 +943,9 @@ int main() {
 
 # UNORDERED MAPS IN C++
 
-An `unordered_map` is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value. Essentially, it stores key-value pairs. Keys are unique and do not have a particular order.
-
-Implemented using Hash tables.
+- An `unordered_map` is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value. Essentially, it stores key-value pairs.
+- Keys are unique and do not have a particular order.
+- Implemented using `Hash tables`.
 
 ## Declaring map
 
@@ -1073,9 +1080,10 @@ int main() {
 
 # Multimaps in C++
 
-A multimap is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value, essentially storing key-value pairs. The multimap is similar to a map, with the addition that multiple elements can have the same keys. Keys are sorted in ascending order by default.
-
-Implemented using Binary Search Trees (Red-Black Trees).
+- A `multimap` is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value, essentially storing key-value pairs.
+- The multimap is similar to a map, with the addition that multiple elements can have the same keys.
+- Keys are sorted in ascending order by default.
+- Implemented using `Binary Search Trees` (Red-Black Trees).
 
 ## Declaring Multimap
 
@@ -1181,9 +1189,10 @@ int main() {
 
 # UNORDERED MULTIMAPS IN C++
 
-An `unordered_multimap` is a data structure that stores elements in a mapped fashion. Each element has a key value and mapped value, essentially storing key-value pairs. Similar to a map, a multimap allows multiple elements to have the same keys.
-
-Keys in an `unordered_multimap` are not sorted, meaning there is no particular order. This data structure is implemented using Hash Tables.
+- An `unordered_multimap` is a data structure that stores elements in a mapped fashion. Each element has a key value and mapped value, essentially storing key-value pairs.
+- Multimap is similar to a map with the addition that `multiple elements can have the same keys`.
+- Keys in an `unordered_multimap` are not sorted, meaning there is no particular order.
+- Implemented using `Hash Tables`.
 
 ## Declaring multimap
 
