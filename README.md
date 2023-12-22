@@ -285,7 +285,7 @@ deque<int> dq( size, value ); /* Deque with size 'size' and all elements with va
 deque<int> dq = { value1, value2, value3,...,valueN}; /* Deque with N values */
 ```
 
-*Note: Similar syntax for char, long long int, float, double, long double, and some other data types include user-defined data types.*
+*Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
 ## Important Functions
 
@@ -339,7 +339,7 @@ priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> 
 priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> q; // min priority_queue of vectors
 ```
 
-*Note: Similar syntax for char, long long int, float, double, long double, and some other data types include user-defined data types.*
+*Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
 ## Important functions on priority_queue
 
@@ -410,7 +410,7 @@ A set data structure won't allow duplicate keys. Keys are sorted in ascending or
 - `set<vector<int>> st;` // set of vectors
 
 
-Note: Similar syntax for char, long long int, float, double, long double, and some other data types include user-defined data types.
+*Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
 ## Important functions on set
 
@@ -491,7 +491,7 @@ unordered_set<pair<int, int>> st;    // unordered_set of pairs
 unordered_set<vector<int>> st;       // unordered_set of vectors
 ```
 
-*Note: Similar syntax for char, long long int, float, double, long double, and some other data types include user-defined data types.*
+*Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
 ## Important functions on unordered_set
 
