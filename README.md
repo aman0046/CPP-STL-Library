@@ -4,7 +4,7 @@
 
 - [Vector In C++](#vector-in-c++)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Contributing](#priority-queue-in-c++)
 - [License](#license)
 
 # VECTOR IN C++
