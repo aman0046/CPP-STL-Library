@@ -4,8 +4,8 @@
 
 - [Vector In C++](#vector-in-c++)
 - [Usage](#usage)
-- [Contributing](#priority-queue-in-c++)
-- [License](#license)
+- [Contributing](#priority-queue-in-c)
+- [License](#set-in-c)
 
 # VECTOR IN C++
 
