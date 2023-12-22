@@ -2,10 +2,19 @@
 
 ## 🚀 Table of Contents
 
-- [Vector In C++](#vector-in-c++)
-- [Usage](#usage)
-- [Contributing](#priority-queue-in-c)
-- [License](#set-in-c)
+- [Vector In C++](#vector-in-c)
+- [Stack In C++](#stack-in-c)
+- [Queue In C++](#queue-in-c)
+- [Deque In C++](#deque-in-c)
+- [Priotity Queue In C++](#priority-queue-in-c)
+- [Set In C++](#set-in-c)
+- [Unordered Set In C++](#unordered-set-in-c)
+- [Multiset In C++](#multiset-in-c)
+- [Unordered Multiset In C++](#unordered-multiset-in-c)
+- [Map In C++](#map-in-c)
+- [Unordered Map In C++](#unordered-map-in-c)
+- [MultiMap In C++](#multimap-in-c)
+- [Unordered MultiMap In C++](#unordered-multimap-in-c)
 
 
 # VECTOR IN C++
