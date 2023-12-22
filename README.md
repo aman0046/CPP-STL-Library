@@ -399,27 +399,27 @@ A set data structure won't allow duplicate keys. Keys are sorted in ascending or
 
 ### Syntax
 
-- `set< data_type > st;` // stores keys in ascending order
-- `set< data_type, greater< data_type > > st;` // stores keys in descending order
+- `set< data_type > st;` stores keys in ascending order
+- `set< data_type, greater< data_type > > st;` stores keys in descending order
 
 ### Examples
 
-- `set<int> st;` // set of int's
-- `set<string> st;` // set of strings
-- `set<pair<int, int>> st;` // set of pairs
-- `set<vector<int>> st;` // set of vectors
+- `set<int> st;` set of int's
+- `set<string> st;` set of strings
+- `set<pair<int, int>> st;` set of pairs
+- `set<vector<int>> st;` set of vectors
 
 
 *Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
 ## Important functions on set
 
-- `st.insert( key );` // Inserts the element into the set (if not present). TC - 𝓞(logn)
-- `st.erase( key );` // Removes the specified key if present. TC - 𝓞(logn)
-- `st.find( key );` // Returns an iterator pointing to the key; if the key is not present, returns st.end(). TC - 𝓞(logn)
-- `st.size();` // Returns the size of the set. TC - 𝓞(1)
-- `st.empty();` // Returns true if the set is empty, else false. TC - 𝓞(1)
-- `st.clear();` // Removes all set elements. TC - 𝓞(n)
+- `st.insert( key );` Inserts the element into the set (if not present). TC - 𝓞(logn)
+- `st.erase( key );` Removes the specified key if present. TC - 𝓞(logn)
+- `st.find( key );` Returns an iterator pointing to the key; if the key is not present, returns st.end(). TC - 𝓞(logn)
+- `st.size();` Returns the size of the set. TC - 𝓞(1)
+- `st.empty();` Returns true if the set is empty, else false. TC - 𝓞(1)
+- `st.clear();` Removes all set elements. TC - 𝓞(n)
 
 ## Accessing set elements
 
@@ -485,10 +485,10 @@ unordered_set< data_type > st;
 ### Examples
 
 ```cpp
-unordered_set<int> st;        // unordered_set of int's
-unordered_set<string> st;     // unordered_set of strings
-unordered_set<pair<int, int>> st;    // unordered_set of pairs
-unordered_set<vector<int>> st;       // unordered_set of vectors
+unordered_set<int> st;  unordered_set of int's
+unordered_set<string> st;  unordered_set of strings
+unordered_set<pair<int, int>> st;  unordered_set of pairs
+unordered_set<vector<int>> st;   unordered_set of vectors
 ```
 
 *Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
@@ -583,31 +583,31 @@ Implemented using Binary search tree (Red-black trees).
 ### Syntax
 
 ```cpp
-multiset< data_type > st; // Stores keys in ascending order
-multiset< data_type, greater< data_type > > st; // Stores keys in descending order
+multiset< data_type > st; Stores keys in ascending order
+multiset< data_type, greater< data_type > > st; Stores keys in descending order
 ```
 
 ### Examples
 
 ```cpp
-multiset<int> st; // Multiset of int's
-multiset<string> st; // Multiset of strings
-multiset<pair<int, int>> st; // Multiset of pairs
-multiset<vector<int>> st; // Multiset of vectors
+multiset<int> st; Multiset of int's
+multiset<string> st; Multiset of strings
+multiset<pair<int, int>> st; Multiset of pairs
+multiset<vector<int>> st; Multiset of vectors
 ```
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
 ## Important Functions on Multiset
 
-- `st.insert( key );` // Inserts the element into the multiset. TC - 𝓞(logn)
-- `st.erase( key );` // Removes all occurrences of the specified key if present. TC - 𝓞(logn)
-- `st.erase( st.find( key ) );` // Removes only one occurrence of the specified key if present. TC - 𝓞(logn)
-- `st.find( key );` // Returns an iterator pointing to the key; if the key is not present, returns `st.end()`. TC - 𝓞(logn)
-- `st.count( key );` // Returns the frequency of the specified key. TC - 𝓞(logn)
-- `st.size();` // Returns the size of the multiset. TC - 𝓞(1)
-- `st.empty();` // Returns true if the multiset is empty; else, false. TC - 𝓞(1)
-- `st.clear();` // Removes all multiset elements. TC - O(n)
+- `st.insert( key );` Inserts the element into the multiset. TC - 𝓞(logn)
+- `st.erase( key );` Removes all occurrences of the specified key if present. TC - 𝓞(logn)
+- `st.erase( st.find( key ) );` Removes only one occurrence of the specified key if present. TC - 𝓞(logn)
+- `st.find( key );` Returns an iterator pointing to the key; if the key is not present, returns `st.end()`. TC - 𝓞(logn)
+- `st.count( key );` Returns the frequency of the specified key. TC - 𝓞(logn)
+- `st.size();` Returns the size of the multiset. TC - 𝓞(1)
+- `st.empty();` Returns true if the multiset is empty; else, false. TC - 𝓞(1)
+- `st.clear();` Removes all multiset elements. TC - O(n)
 
 ## Accessing Multiset Elements
 Since it won't provide indexing, we cannot directly access any element. The below is the way to traverse the multiset.
@@ -686,10 +686,10 @@ unordered_multiset< data_type > st;
 ### Examples
 
 ```cpp
-unordered_multiset<int> st;                // unordered_multiset of int's
-unordered_multiset<string> st;             // unordered_multiset of strings
-unordered_multiset<pair<int, int>> st;     // unordered_multiset of pairs
-unordered_multiset<vector<int>> st;        // unordered_multiset of vectors
+unordered_multiset<int> st;   unordered_multiset of int's
+unordered_multiset<string> st;    unordered_multiset of strings
+unordered_multiset<pair<int, int>> st;  unordered_multiset of pairs
+unordered_multiset<vector<int>> st;  unordered_multiset of vectors
 ```
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
@@ -813,7 +813,7 @@ Implemented using Binary Search Trees (Red-Black Trees).
 ### Syntax
 
 ```cpp
-map<key_data_type, value_data_type> mp; // keys are unique and sorted in ASC
+map<key_data_type, value_data_type> mp; keys are unique and sorted in ASC
 ```
 
 ### Examples
