@@ -281,11 +281,15 @@ Formally, a deque supports all the functions that a vector supports. The differe
 
 ### Syntax
 ```cpp
-deque<int> dq; /* Empty */
-deque<int> dq( size ); /* Deque with size 'size' */
-deque<int> dq( size, value ); /* Deque with size 'size' and all elements with value 'value' */
-deque<int> dq = { value1, value2, value3,...,valueN}; /* Deque with N values */
+deque< data_type > deque_name;
 ```
+
+### Examples
+- `deque<int> dq;` Deque of int (Empty) 
+- `deque<int> dq( size );`  Deque with size 'size' 
+- `deque<int> dq( size, value );`  Deque with size 'size' and all elements with value 'value' 
+- `deque<int> dq = { value1, value2, value3,...,valueN};` Deque with N values 
+
 
 *Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
@@ -402,9 +406,10 @@ int main() {
 ## Declaring set
 
 ### Syntax
-
-- `set< data_type > st;` stores keys in ascending order
-- `set< data_type, greater< data_type > > st;` stores keys in descending order
+```cpp
+set< data_type > st; stores keys in ascending order
+set< data_type, greater< data_type > > st; stores keys in descending order
+```
 
 ### Examples
 
@@ -491,12 +496,11 @@ unordered_set< data_type > st;
 
 ### Examples
 
-```cpp
-unordered_set<int> st;  unordered_set of int's
-unordered_set<string> st;  unordered_set of strings
-unordered_set<pair<int, int>> st;  unordered_set of pairs
-unordered_set<vector<int>> st;   unordered_set of vectors
-```
+- `unordered_set<int> st;`  unordered_set of int's
+- `unordered_set<string> st;`  unordered_set of strings
+- `unordered_set<pair<int, int>> st;`  unordered_set of pairs
+- `unordered_set<vector<int>> st;`  unordered_set of vectors
+
 
 *Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
@@ -596,12 +600,11 @@ multiset< data_type, greater< data_type > > st; Stores keys in descending order
 
 ### Examples
 
-```cpp
-multiset<int> st; Multiset of int's
-multiset<string> st; Multiset of strings
-multiset<pair<int, int>> st; Multiset of pairs
-multiset<vector<int>> st; Multiset of vectors
-```
+- `multiset<int> st;` Multiset of int's
+- `multiset<string> st;` Multiset of strings
+- `multiset<pair<int, int>> st;` Multiset of pairs
+- `multiset<vector<int>> st;` Multiset of vectors
+
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
@@ -692,12 +695,11 @@ unordered_multiset< data_type > st;
 
 ### Examples
 
-```cpp
-unordered_multiset<int> st;   unordered_multiset of int's
-unordered_multiset<string> st;    unordered_multiset of strings
-unordered_multiset<pair<int, int>> st;  unordered_multiset of pairs
-unordered_multiset<vector<int>> st;  unordered_multiset of vectors
-```
+- `unordered_multiset<int> st;`   unordered_multiset of int's
+- `unordered_multiset<string> st;`    unordered_multiset of strings
+- `unordered_multiset<pair<int, int>> st;`  unordered_multiset of pairs
+- `unordered_multiset<vector<int>> st;`  unordered_multiset of vectors
+
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
@@ -825,14 +827,14 @@ map<key_data_type, value_data_type> mp; keys are unique and sorted in ASC
 
 ### Examples
 
-```cpp
-map<int, int> mp;
-map<int, string> mp;
-map<int, vector<int>> mp;
-map<string, vector<int>> mp;
-```
+- `map<int, int> mp;` map of int as key and int as value
+- `map<int, string> mp;`   map of int as key and String as value
+- `map<int, vector<int>> mp;`  map of int as key and vector<int> as value
+- `map<string, vector<int>> mp;`  map of String as key and vector<int> as value
+
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
+
 
 ## Important functions
 
@@ -956,14 +958,13 @@ unordered_map<key_data_type, value_data_type> mp; // keys are unique and not hav
 
 ### Examples
 
-```cpp
-unordered_map<int, int> mp;
-unordered_map<int, string> mp;
-unordered_map<int, vector<int>> mp;
-unordered_map<string, vector<int>> mp;
-```
+- `unordered_map<int, int> mp;`  unordered_map of int as key and int as value
+- `unordered_map<int, string> mp;`   unordered_map of int as key and String as value
+- `unordered_map<int, vector<int>> mp;`  unordered_map of int as key and vector<int> as value
+- `unordered_map<string, vector<int>> mp;`   unordered_map of String as key and vector<int> as value
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
+
 
 ## Important Functions
 
@@ -1095,12 +1096,11 @@ multimap<key_data_type, value_data_type> mp; // keys are sorted in ascending ord
 
 ### Examples
 
-```cpp
-multimap<int, int> mp;                // multimap of int's
-multimap<int, string> mp;             // multimap of strings
-multimap<int, vector<int>> mp;        // multimap of vectors
-multimap<string, vector<int>> mp;     // multimap of vectors
-```
+- `multimap<int, int> mp;`  multimap of int's
+- `multimap<int, string> mp;`   multimap of strings
+- `multimap<int, vector<int>> mp;`  multimap of vectors
+- `multimap<string, vector<int>> mp;` multimap of vectors
+
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
@@ -1204,12 +1204,11 @@ unordered_multimap<key_data_type, value_data_type> mp; // keys are not sorted i.
 
 ### Examples
 
-```cpp
-unordered_multimap<int, int> mp;
-unordered_multimap<int, string> mp;
-unordered_multimap<int, vector<int>> mp;
-unordered_multimap<string, vector<int>> mp;
-```
+- `unordered_multimap<int, int> mp;`  unordered_multimap of int as key and int as value
+- `unordered_multimap<int, string> mp;`   unordered_multimap of int as key and String as value
+- `unordered_multimap<int, vector<int>> mp;`   unordered_multimap of int as key and vector<int> as value
+- `unordered_multimap<string, vector<int>> mp;`   unordered_multimap of String as key and vector<int> as value
+
 
 Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.
 
