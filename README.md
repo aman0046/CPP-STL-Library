@@ -48,6 +48,10 @@ In C++, the Standard Template Library (STL) provides a set of programming tools 
 
 ---
 
+<img src="/assets/images/CPPSTL.png" width="400" height="200">
+
+---
+
 # VECTOR IN C++
 
 A **vector** is a dynamic array whose size can be changed automatically when an element is inserted or deleted. Vector elements are stored in contiguous memory locations so that they can be accessed in constant time.
