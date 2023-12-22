@@ -1,4 +1,8 @@
-# C\+\+ STL-Library
+# C\+\+ STL-Library 📚📚
+
+In C++, the Standard Template Library (STL) provides a set of programming tools to implement algorithms and data structures like vectors, lists, queues, etc. This repository contains entire C++ STL Library which anyone require while doing Competitive Programming, Contest solving or in Online Assessment. 
+
+---
 
 ## 🚀 Table of Contents
 
@@ -16,6 +20,7 @@
 - [MultiMap In C++](#multimaps-in-c)
 - [Unordered MultiMap In C++](#unordered-multimaps-in-c)
 
+---
 
 # VECTOR IN C++
 
@@ -143,6 +148,7 @@ int main() {
 
 ```
 
+---
 
 # STACK IN C++
 
@@ -210,6 +216,7 @@ int main() {
 }
 ```
 
+---
 
 # QUEUE IN C++
 
@@ -282,6 +289,8 @@ int main() {
 }
 ```
 
+---
+
 # DEQUE IN C++
 
 Deque is an indexed sequence container that allows fast insertion and deletion at both its beginning and its end.
@@ -323,6 +332,7 @@ deque< data_type > deque_name;
 - `dq.at(i);` Accesses the element at the i'th index (0-based) (TC - 𝓞(1))
 
 
+---
 
 # PRIORITY QUEUE IN C++
 
@@ -413,6 +423,8 @@ int main() {
 }
 ```
 
+---
+
 # SET IN C++
 
 - A set data structure `won't allow duplicate keys`.
@@ -495,6 +507,7 @@ int main() {
 }
 ```
 
+---
 
 # Unordered Set in C++
 
@@ -599,6 +612,8 @@ int main() {
 }
 ```
 
+---
+
 # MULTISET IN C++
 
 - A multiset data structure `allows multiple keys with the same values`.
@@ -694,6 +709,8 @@ int main() {
     return 0;
 }
 ```
+
+---
 
 # Unordered Multiset in C++
 
@@ -827,6 +844,8 @@ int main() {
 }
 ```
 
+---
+
 # MAPS IN C++
 
 - A map is a data structure that stores elements in a mapped fashion. Each element has a key value and a mapped value, effectively storing `key-value pairs`.
@@ -958,6 +977,8 @@ int main() {
     return 0;
 }
 ```
+
+---
 
 # UNORDERED MAPS IN C++
 
@@ -1094,6 +1115,8 @@ int main() {
     return 0;
 }
 ```
+---
+
 
 # Multimaps in C++
 
