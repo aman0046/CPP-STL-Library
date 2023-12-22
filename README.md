@@ -11,10 +11,10 @@
 - [Unordered Set In C++](#unordered-set-in-c)
 - [Multiset In C++](#multiset-in-c)
 - [Unordered Multiset In C++](#unordered-multiset-in-c)
-- [Map In C++](#map-in-c)
-- [Unordered Map In C++](#unordered-map-in-c)
-- [MultiMap In C++](#multimap-in-c)
-- [Unordered MultiMap In C++](#unordered-multimap-in-c)
+- [Map In C++](#maps-in-c)
+- [Unordered Map In C++](#unordered-maps-in-c)
+- [MultiMap In C++](#multimaps-in-c)
+- [Unordered MultiMap In C++](#unordered-multimaps-in-c)
 
 
 # VECTOR IN C++
