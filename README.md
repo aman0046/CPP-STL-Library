@@ -141,26 +141,26 @@ stack< data_type > stack_name;
 
 ### Examples
 
-- `stack<int> stk;` // stack of int's
-- `stack<string> stk;` // stack of strings
-- `stack<pair<int, int>> stk;` // stack of pairs
-- `stack<vector<int>> stck;` // stack of vectors
+- `stack<int> stk;` stack of int's
+- `stack<string> stk;` stack of strings
+- `stack<pair<int, int>> stk;` stack of pairs
+- `stack<vector<int>> stck;` stack of vectors
 
 *Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
 ## Important Functions on Stack
 
-- `stk.push(ele);` // pushes an element 'ele' into the stack      TC - 𝓞(1)
-- `stk.pop();` // removes the top element      TC - 𝓞(1)
-- `stk.top();` // returns the topmost element      TC - 𝓞(1)
-- `stk.size();` // returns the size of stack      TC - 𝓞(1)
-- `stk.empty();` // returns true if the stack is empty else false      TC - 𝓞(1)
+- `stk.push(ele);` pushes an element 'ele' into the stack      TC - 𝓞(1)
+- `stk.pop();` removes the top element      TC - 𝓞(1)
+- `stk.top();` returns the topmost element      TC - 𝓞(1)
+- `stk.size();` returns the size of stack      TC - 𝓞(1)
+- `stk.empty();` returns true if the stack is empty else false      TC - 𝓞(1)
 
 *Note: The time complexity of all above inbuilt functions is constant - 𝓞(1)*
 
 ## Accessing Stack Elements
 
-Since it won't provide indexing, we cannot directly access any element except the top element. The below is the way to traverse the stack.
+Since it won't provide indexing, *we cannot directly access any element except the top element.* The below is the way to traverse the stack.
 ```cpp
 while(!stk.empty()){
     cout << stk.top() << " ";
@@ -208,21 +208,21 @@ queue< data_type > queue_name;
 
 ### Examples
 
-- `queue<int> q;` // queue of int's
-- `queue<string> q;` // queue of strings
-- `queue<pair<int, int>> q;` // queue of pairs
-- `queue<vector<int>> q;` // queue of vectors
+- `queue<int> q;` queue of int's
+- `queue<string> q;` queue of strings
+- `queue<pair<int, int>> q;` queue of pairs
+- `queue<vector<int>> q;` queue of vectors
 
 *Note: Similar syntax for `char`, `long long int`, `float`, `double`, `long double`, and some other data types, including user-defined data types.*
 
 ## Important Functions on Queue
 
-- `q.push(ele);` // pushes an element 'ele' into the queue from the end      TC - 𝓞(1)
-- `q.pop();` // removes an element from the front of the queue      TC - 𝓞(1)
-- `q.front();` // returns the first element      TC - 𝓞(1)
-- `q.back();` // returns the last element      TC - 𝓞(1)
-- `q.size();` // returns the size of the queue      TC - 𝓞(1)
-- `q.empty();` // returns true if the queue is empty else false      TC - 𝓞(1)
+- `q.push(ele);` pushes an element 'ele' into the queue from the end      TC - 𝓞(1)
+- `q.pop();` removes an element from the front of the queue      TC - 𝓞(1)
+- `q.front();` returns the first element      TC - 𝓞(1)
+- `q.back();` returns the last element      TC - 𝓞(1)
+- `q.size();` returns the size of the queue      TC - 𝓞(1)
+- `q.empty();` returns true if the queue is empty else false      TC - 𝓞(1)
 
 *Note: The time complexity of all above inbuilt functions is constant - 𝓞(1)*
 
@@ -339,29 +339,15 @@ priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> 
 priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> q; // min priority_queue of vectors
 ```
 
-Note: Similar syntax for char, long long int, float, double, long double, and some other data types include user-defined data types.
+*Note: Similar syntax for char, long long int, float, double, long double, and some other data types include user-defined data types.*
 
 ## Important functions on priority_queue
 
-### `pq.push(ele);`
-- Inserts the element 'ele' into the priority queue.
-- Time Complexity: 𝓞(logn)
-
-### `pq.pop();`
-- Removes the element with the highest priority.
-- Time Complexity: 𝓞(logn)
-
-### `pq.top();`
-- Returns the element with the highest priority.
-- Time Complexity: 𝓞(1)
-
-### `pq.size();`
-- Returns the size of the priority_queue.
-- Time Complexity: 𝓞(1)
-
-### `pq.empty();`
-- Returns true if the priority_queue is empty, else false.
-- Time Complexity: 𝓞(1)
+- `pq.push(ele);` Inserts the element 'ele' into the priority queue. [Time Complexity: 𝓞(logn)]
+- `pq.pop();` Removes the element with the highest priority. [Time Complexity: 𝓞(logn)]
+- `pq.top();` Returns the element with the highest priority. [Time Complexity: 𝓞(1)]
+- `pq.size();` Returns the size of the priority_queue. [Time Complexity: 𝓞(1)]
+- `pq.empty();` Returns true if the priority_queue is empty, else false. [Time Complexity: 𝓞(1)]
 
 ## Accessing priority_queue elements
 
