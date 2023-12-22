@@ -289,9 +289,9 @@ deque<int> dq = { value1, value2, value3,...,valueN}; /* Deque with N values */
 
 ## Important Functions
 
-- `dq.push_back( ele );` Adds an element 'ele' at the end, and the size of the deque increases by 1 (TC - 𝓞(1))
+- `dq.push_back( ele );` Adds an element 'ele' at the end (TC - 𝓞(1))
 - `dq.pop_back();` Removes an element at the end (TC - 𝓞(1))
-- `dq.push_front( ele );` Adds an element 'ele' at the front, and the size of the deque increases by 1 (TC - 𝓞(1))
+- `dq.push_front( ele );` Adds an element 'ele' at the front (TC - 𝓞(1))
 - `dq.pop_front();` Removes an element at the front (TC - 𝓞(1))
 - `dq.size();` Returns the size of the deque (TC - 𝓞(1))
 - `dq.empty();` Returns true if the deque is empty, else false (TC - 𝓞(1))
