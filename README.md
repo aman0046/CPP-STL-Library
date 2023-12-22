@@ -360,7 +360,7 @@ while (!pq.empty()) {
 }
 ```
 
-*Priority Queue Sample Program*
+*Lets understand by sample program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -431,7 +431,7 @@ for (auto x : st) {
 }
 ```
 
-## Sample Program - Understanding Set in C++
+*Lets understand by sample program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -532,9 +532,9 @@ for (auto x : st) {
 }
 ```
 
-```cpp
-// Lets understand by sample program
+*Lets understand by sample program*
 
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -618,7 +618,7 @@ for( auto x : st ){
 }
 ```
 
-## Sample Program
+*Lets understand by sample program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -742,7 +742,7 @@ for (auto x : st) {
 }
 ```
 
-## Sample Program Explained
+*Lets understand by sample program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -891,7 +891,7 @@ for(auto it = mp.rbegin() ; it != mp.rend() ; it++){
 }
 ```
 
-## Sample Program to Understand Maps in C++
+*Lets understand by sample program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1033,9 +1033,7 @@ for(auto it = mp.rbegin() ; it != mp.rend() ; it++){
 }
 ```
 
-## Understanding Unordered Map in C++
-
-Let's understand with a sample program:
+*Lets understand by sample program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1136,7 +1134,7 @@ for(auto it = mp.rbegin(); it != mp.rend(); it++){
 }
 ```
 
-## Lets understand by sample program
+*Lets understand by sample program*
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1279,7 +1277,7 @@ for(auto it = mp.rbegin() ; it != mp.rend() ; it++){
 }
 ```
 
-## Lets understand by sample program
+*Lets understand by sample program*
 
 ```cpp
 #include <bits/stdc++.h>
